@@ -85,23 +85,7 @@ public class loginLogoutPageStepDefinitions extends TestBase {
 	public void i_search_and_add_nd_available_item_to_cart(String arg1) throws Throwable {
 	    loginPage.enterSearchItemandAddToCart(arg1);
 	}
-	
-	@Then("^I clear cart items if any$")
-	public void i_clear_cart_items_if_any() throws Throwable {
-	    loginPage.clearCartItemifExist();
-	}
-	
-	@Then("^I Select cart from home and remove the earlier added headphones$")
-	public void i_Select_cart_from_home_and_remove_the_earlier_added_headphones() throws Throwable {
-	    loginPage.cartButton.click();
-	    loginPage.itemList.get(1).click();
-	}
-	
-	@Then("^I Reduce the Quantity of the macbook pro product to one and proceed to checkout$")
-	public void i_Reduce_the_Quantity_of_the_macbook_pro_product_to_one_and_proceed_to_checkout() throws Throwable {
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		 js.executeScript("arguments[0].innerText='1'",driver.findElement(By.className("a-dropdown-prompt")));
-	}
+
 	
 	@Then("^I search different \"([^\"]*)\" from the search bar$")
 	public void i_search_different_from_the_search_bar(String arg1) throws Throwable {
